@@ -27,3 +27,21 @@ console.log(typeof myfunction)//function
 console.log(typeof BigNumber)//bigInt
 console.log(typeof id)//Symbol
 console.log(typeof userEmail)//undefined
+
+//+++++++++++++++++++++++Meomery+++++++++++++++++++++;
+
+//stack(primitive),Heap(Non-primitive )
+
+let myYoutubeName="Yashshinde.com"
+
+let anotherName="myyoutube"
+anotherName="chaiAurCode"
+console.log(anotherName)
+
+let user1={
+    email:"user1@123",
+    upi:"user@xyz"
+}
+let user2=user1
+user2.email="user2@123"
+console.log(user1.email)
