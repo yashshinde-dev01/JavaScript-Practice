@@ -24,6 +24,22 @@ console.log(newStr1);
 console.log(newStr1.split());
 console.log(newStr1.trim());
 
+const url="https://hitesh.com/hitesh%20choudhary"
+console.log(url.replace('%20','-'))
+
+console.log(url.includes('hitesh'))
+
+console.log(newGame.split('-'));
+
+console.log("  hi  ".trimEnd())
+
+const eg="javascript"
+console.log(eg.startsWith("j"));
+
+console.log('hi'.concat("hello"))
+
+console.log("ha".repeat(4))
+
 
 
 
