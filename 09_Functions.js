@@ -2,26 +2,26 @@
 
 const { use } = require("react");
 
-// function sayMyName(){
-//     console.log("my function");
-// }
-// // sayMyName()
+function sayMyName(){
+    console.log("my function");
+}
+// sayMyName()
 
-// function addtwoNum(num1,num2){
-//     console.log(num1+num2);
-// }
-// addtwoNum(2,3) 
+function addtwoNum(num1,num2){
+    console.log(num1+num2);
+}
+addtwoNum(2,3) 
 
-// function loginUser(UserName="yash"){
-//     if(UserName=== undefined){
-//         console.log("please enter username");
-//         return
-//     }
-//     return `${UserName} just logged in `
-// }
+function loginUser(UserName="yash"){
+    if(UserName=== undefined){
+        console.log("please enter username");
+        return
+    }
+    return `${UserName} just logged in `
+}
 
-// const take=loginUser()
-// console.log(take);
+const take=loginUser()
+console.log(take);
 
 
 //... called spread operator 
