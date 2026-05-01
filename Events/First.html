@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+     <div class="images">
+        <h3>Awasome images</h3>
+        <ul id="images">
+             <li>
+            <img id="photo1" src="https://picsum.photos/id/1011/300/200" width="200px" alt="Photo 1">
+        </li>
+        <li>
+            <img id="photo2" src="https://picsum.photos/id/1015/300/200" width="200px" alt="Photo 2">
+        </li>
+        <li>
+            <img id="photo3" src="https://picsum.photos/id/1025/300/200" width="200px" alt="Photo 3">
+        </li>
+        <li>
+            <img id="photo4" src="https://picsum.photos/id/1035/300/200" width="200px" alt="Photo 4">
+        </li>
+        <li>
+            <img id="photo5" src="https://picsum.photos/id/1043/300/200" width="200px" alt="Photo 5">
+        </li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+</body>
+<script>
+    // document.getElementById('photo4').onclick=function(){
+    //      alert('image 4 clicked')
+    // }
+    //learn this ---->>>
+    //type,timestamp,defaultPrevented,
+    // target, toElement, srcElement,currenttarget,\
+    // clientX,clientY,screenX,screenY
+    // altKey,ctrlKey,shiftkey,keycode
+
+    // document.getElementById('photo4').addEventListener('click',function(e){
+    //     console.log(e);
+    // },false)
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");
+    // },false)
+
+
+    // document.getElementById('photo4').addEventListener('click',function(e){
+    //     console.log("image 4 clicked");
+    //     e.stopPropagation();
+    // },false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     console.log("Google clicked");
+    // })
+
+    
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName=='IMG'){
+            console.log(e.target.id);
+            let removeIt=e.target.parentNode;
+            removeIt.remove();
+        }
+
+        // removeIt.remove()
+        // removeIt.parentNode.removeChild(removeIt) b 
+    })
+</script>
+</html>
