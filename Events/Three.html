@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Js </h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+    <script>
+    //     const sayDate=function(str){
+    //         console.log(str,Date.now());
+    //     }
+    //  const intervalId=setInterval(sayDate,2000,"hi")
+     
+    //  clearInterval(intervalId)
+
+    let intervalId;
+
+    const saySomething=function(){
+        console.log("Hitesh is on top");
+    }
+    // const set=function(){
+    //     setInterval(saySomething,2000);
+    //  }
+
+     document.querySelector('#start').addEventListener('click',function(){
+        if(!intervalId){
+            intervalId=setInterval(saySomething,3000)
+        }
+     });
+     document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(intervalId);
+        intervalId=null;
+     })
+        
+    </script>
+</body>
+</html>
