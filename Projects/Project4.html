@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusses number</title>
+    <style>
+        body{
+            background-color: #212121;
+            color:#fff;
+        }
+        #Wrapper{
+            background-color: #a2b9bc;
+            color: black;
+            height: 500px;
+            width:500px;
+            padding: 66px;
+            font-size: large;
+           
+        }
+        #subt{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="Wrapper">
+        <h1> Number Gusseing game</h1>
+        <p>try and guess a random number between 1 to 100</p>
+        <p>you have 10 attempts to guess the right the number</p>
+
+        <br>
+    <form class="form">
+        <label for="guessField" id="guess">Guess a number</label2>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" id="subt" value="submit guess" class="guessSubmit">
+    </form>
+    <div class="resultParas">
+        <p>Previous Guesses:<span class="guesses"></span></p>
+        <p>Guesses remaining:<span class="lastResult">10</span></p>
+        <p class="lowOrHi"></p>
+    </div>
+    </div>
+    <script src="Project4.js"></script>
+</body>
+</html>
