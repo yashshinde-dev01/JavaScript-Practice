@@ -48,3 +48,51 @@ promiseFour.then((user)=>{
 }).catch(function(error){
     console.log(error);
 })
+
+const promise5=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error=true
+        if(!error){
+            resolve({username:"js",password:"123"})
+        }else{
+            reject('Error:Js went wrong')
+        }
+    },2000)
+})
+
+// async await 
+
+async function consumepromise5(){
+    try{
+        const response=await promise5
+    console.log(response);
+    }catch(err){
+        console.log(err);
+    }
+}
+
+consumepromise5()
+
+//fetch
+
+// async function getalluser(){
+//     try{
+//         const response= await fetch('https://api.github.com/users/PrathameshGurav250706')
+//      const data= await response.json()
+//      console.log(data)
+//     }catch(err){
+//         console.log("error");
+//     }
+// }
+// getalluser()
+
+
+
+fetch('https://api.github.com/users/PrathameshGurav250706').then((response)=>{
+    return response.json()
+}).then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log('error');
+})
